@@ -11,4 +11,9 @@
 - treesitter
 - undotree
 
+## Pre-requisites
+
+### Linux
+Pretty much everything comes up setup in linux, so no boiler plate setup
+
 Happy Coding :)
