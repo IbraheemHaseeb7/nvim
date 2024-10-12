@@ -16,7 +16,7 @@
 ### Windows
 Make sure to have these packages installed in your windows system
 
-- gcc (Download here)
+- gcc (Download [here](https://www.codeblocks.org/downloads/binaries/))
 - unzip
 - ripgrep
 
