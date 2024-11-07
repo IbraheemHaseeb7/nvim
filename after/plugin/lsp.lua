@@ -1,14 +1,19 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-	ensure_installed = { "lua_ls", "gopls", "ts_ls", "pyright", "tailwindcss", "eslint" }
+	ensure_installed = { "intelephense", "lua_ls", "gopls", "ts_ls", "clangd", "pyright", "tailwindcss", "eslint" }
 })
 
 require("lspconfig").lua_ls.setup {}
 require("lspconfig").gopls.setup {}
 require("lspconfig").ts_ls.setup {}
+<<<<<<< Updated upstream
 require("lspconfig").pyright.setup {}
 require("lspconfig").tailwindcss.setup {}
 require("lspconfig").eslint.setup {}
+=======
+require("lspconfig").clangd.setup {}
+require("lspconfig").pyright.setup {}
+>>>>>>> Stashed changes
 
 local lsp_zero = require('lsp-zero')
 local cmp = require('cmp')
