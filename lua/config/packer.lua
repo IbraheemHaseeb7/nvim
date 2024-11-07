@@ -26,7 +26,7 @@ return require('packer').startup(function(use)
 	use ('theprimeagen/harpoon')
 	use ('mbbill/undotree')
 
-	use({'VonHeikemen/lsp-zero.nvim', branch = 'v4.x'}) 
+	use({'VonHeikemen/lsp-zero.nvim', branch = 'v4.x'})
 	use({'hrsh7th/nvim-cmp'})
 	use({'hrsh7th/cmp-nvim-lsp'})
 	use { "sitiom/nvim-numbertoggle" }
@@ -36,4 +36,12 @@ return require('packer').startup(function(use)
 	use({'neovim/nvim-lspconfig'})
 
 	use 'm4xshen/autoclose.nvim'
+	use {
+		'nvim-lualine/lualine.nvim',
+		requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+	}
+	use 'nvim-tree/nvim-web-devicons'
+
+	use {"windwp/nvim-ts-autotag"}
+
 end)
