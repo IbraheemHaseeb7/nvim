@@ -1,13 +1,14 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-	ensure_installed = { "intelephense", "lua_ls", "gopls", "ts_ls", "clangd" }
+	ensure_installed = { "lua_ls", "gopls", "ts_ls", "pyright", "tailwindcss", "eslint" }
 })
 
 require("lspconfig").lua_ls.setup {}
-require("lspconfig").intelephense.setup {}
 require("lspconfig").gopls.setup {}
 require("lspconfig").ts_ls.setup {}
-require("lspconfig").clangd.setup {}
+require("lspconfig").pyright.setup {}
+require("lspconfig").tailwindcss.setup {}
+require("lspconfig").eslint.setup {}
 
 local lsp_zero = require('lsp-zero')
 local cmp = require('cmp')
