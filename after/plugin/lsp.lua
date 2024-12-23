@@ -10,6 +10,7 @@ require("lspconfig").tailwindcss.setup {}
 require("lspconfig").eslint.setup {}
 require("lspconfig").clangd.setup {}
 require("lspconfig").pyright.setup {}
+require("lspconfig").intelephense.setup {}
 
 local lsp_zero = require('lsp-zero')
 local cmp = require('cmp')
