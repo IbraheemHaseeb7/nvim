@@ -50,4 +50,28 @@ return require('packer').startup(function(use)
 			require('Comment').setup()
 		end
 	}
+	use {
+		'akinsho/flutter-tools.nvim',
+		requires = {
+			'nvim-lua/plenary.nvim',
+			'stevearc/dressing.nvim', -- For UI prompts
+		},
+		config = function()
+			require('flutter-tools').setup {
+				-- Customize options as needed
+				debugger = {
+					enabled = true, -- Enable debugging
+					run_via_dap = true, -- Use nvim-dap for debugging
+				},
+				lsp = {
+					-- LSP settings for Dart
+					settings = {
+						showtodos = true,
+						completefunctioncalls = true,
+					},
+				},
+				-- Other configurations like widget guides, fvm support, etc.
+			}
+		end
+	}
 end)
