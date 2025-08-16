@@ -74,4 +74,28 @@ return require('packer').startup(function(use)
 			}
 		end
 	}
+
+	use 'f-person/git-blame.nvim'
+	use { "gbprod/substitute.nvim" }
+	use({
+		"kylechui/nvim-surround",
+		tag = "*",
+		config = function()
+			require("nvim-surround").setup({
+			})
+		end
+	})
+
+	use 'github/copilot.vim'
+
+	use ({
+		"ravitemer/mcphub.nvim",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+		},
+		build = "npm install -g mcp-hub@latest",  -- Installs `mcp-hub` node binary globally
+		config = function()
+			require("mcphub").setup()
+		end
+	})
 end)
