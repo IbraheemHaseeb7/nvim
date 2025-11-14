@@ -3,14 +3,27 @@ require("mason-lspconfig").setup({
 	ensure_installed = { "intelephense", "lua_ls", "gopls", "ts_ls", "clangd", "pyright", "tailwindcss", "eslint" }
 })
 
-require("lspconfig").lua_ls.setup {}
-require("lspconfig").gopls.setup {}
-require("lspconfig").ts_ls.setup {}
-require("lspconfig").tailwindcss.setup {}
-require("lspconfig").eslint.setup {}
-require("lspconfig").clangd.setup {}
-require("lspconfig").pyright.setup {}
-require("lspconfig").intelephense.setup {}
+vim.lsp.config("lua_ls", {})
+vim.lsp.config("gopls", {})
+vim.lsp.config("ts_ls", {})
+vim.lsp.config("tailwindcss", {})
+vim.lsp.config("eslint", {})
+vim.lsp.config("clangd", {})
+vim.lsp.config("pyright", {})
+vim.lsp.config("intelephense", {})
+
+vim.lsp.config('dartls', {
+	settings = {
+		dart = {
+			analysisExcludedFolders = {
+				vim.fn.expand("$HOME/.pub-cache"),
+				vim.fn.expand("$HOME/AppData/Local/Pub/Cache"),
+				vim.fn.expand("/opt/homebrew"),
+				vim.fn.expand("$HOME/work/development/flutter/"),
+			}
+		}
+	}
+})
 
 local lsp_zero = require('lsp-zero')
 local cmp = require('cmp')

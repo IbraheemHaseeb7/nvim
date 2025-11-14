@@ -15,11 +15,20 @@ return require('packer').startup(function(use)
 
 	use ( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 	use ('nvim-treesitter/playground')
+
+	-- use ({ 
+	-- 	'rose-pine/neovim',
+	-- 	as = 'rose-pine',
+	-- 	config = function ()
+	-- 		vim.cmd('colorscheme rose-pine')
+	-- 	end
+	-- })
+	
 	use ({ 
-		'rose-pine/neovim',
-		as = 'rose-pine',
+		'folke/tokyonight.nvim',
+		as = 'tokyonight',
 		config = function ()
-			vim.cmd('colorscheme rose-pine')
+			vim.cmd('colorscheme tokyonight')
 		end
 	})
 
@@ -50,30 +59,6 @@ return require('packer').startup(function(use)
 			require('Comment').setup()
 		end
 	}
-	use {
-		'akinsho/flutter-tools.nvim',
-		requires = {
-			'nvim-lua/plenary.nvim',
-			'stevearc/dressing.nvim', -- For UI prompts
-		},
-		config = function()
-			require('flutter-tools').setup {
-				-- Customize options as needed
-				debugger = {
-					enabled = true, -- Enable debugging
-					run_via_dap = true, -- Use nvim-dap for debugging
-				},
-				lsp = {
-					-- LSP settings for Dart
-					settings = {
-						showtodos = true,
-						completefunctioncalls = true,
-					},
-				},
-				-- Other configurations like widget guides, fvm support, etc.
-			}
-		end
-	}
 
 	use 'f-person/git-blame.nvim'
 	use { "gbprod/substitute.nvim" }
@@ -88,14 +73,36 @@ return require('packer').startup(function(use)
 
 	use 'github/copilot.vim'
 
+	-- use ({
+	-- 	"ravitemer/mcphub.nvim",
+	-- 	dependencies = {
+	-- 		"nvim-lua/plenary.nvim",
+	-- 	},
+	-- 	build = "npm install -g mcp-hub@latest",  -- Installs `mcp-hub` node binary globally
+	-- 	config = function()
+	-- 		require("mcphub").setup()
+	-- 	end
+	-- })
+
 	use ({
-		"ravitemer/mcphub.nvim",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-		},
-		build = "npm install -g mcp-hub@latest",  -- Installs `mcp-hub` node binary globally
+		"lukas-reineke/indent-blankline.nvim",
 		config = function()
-			require("mcphub").setup()
+			require("ibl").setup()
 		end
 	})
+	use({
+		"stevearc/oil.nvim",
+		config = function()
+			require("oil").setup({
+				view_options = {
+					show_hidden = true
+				}
+			})
+		end,
+	})
+
+	use('nvim-pack/nvim-spectre')
+	use('nvim-lua/plenary.nvim')
+	use('sphamba/smear-cursor.nvim')
+
 end)
