@@ -105,4 +105,93 @@ return require('packer').startup(function(use)
 	use('nvim-lua/plenary.nvim')
 	use('sphamba/smear-cursor.nvim')
 
+	use {
+		'IbraheemHaseeb7/ghpr.nvim',
+		config = function()
+			vim.keymap.set('n', '<leader>gp', ':OpenPR<CR>', { desc = "Git: Open PR for line" })
+		end
+	}
+
+	use {
+		'rhysd/conflict-marker.vim',
+	}
+
+
+	use 'MunifTanjim/nui.nvim'
+	use 'MeanderingProgrammer/render-markdown.nvim'
+	use 'HakonHarnes/img-clip.nvim'
+	use 'zbirenbaum/copilot.lua'
+	use 'stevearc/dressing.nvim'
+	use 'folke/snacks.nvim'
+
+	use {
+		'yetone/avante.nvim',
+		run = 'make',
+		requires = {
+			'nvim-treesitter/nvim-treesitter',
+			'stevearc/dressing.nvim',
+			'nvim-lua/plenary.nvim',
+			'MunifTanjim/nui.nvim',
+			'nvim-tree/nvim-web-devicons',
+			'hrsh7th/nvim-cmp',
+			'MeanderingProgrammer/render-markdown.nvim',
+		},
+		config = function()
+			require('avante').setup({
+				provider = "mistral",
+				providers = {
+					mistral = {
+						__inherited_from = "openai",
+						api_key_name = "MISTRAL_API_KEY",
+						timeout = 30000,
+					},
+				},
+			})
+		end
+	}
+
+
+	use({
+		"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+		config = function()
+			require("lsp_lines").setup()
+		end,
+	})
+
+	use({
+		"https://github.com/ThePrimeagen/refactoring.nvim",
+		requires = {
+			"lewis6991/async.nvim",
+		},
+		lazy = false
+	})
+
+	use {
+		'gelguy/wilder.nvim',
+		requires = {
+			'romgrk/fzy-lua-native',
+			'nvim-tree/nvim-web-devicons',
+		},
+		run = ':UpdateRemotePlugins',
+		config = function()
+			local wilder = require('wilder')
+
+			wilder.setup({
+				modes = { ':', '/', '?' }
+			})
+
+			wilder.set_option('pipeline', {
+				wilder.branch(
+					wilder.cmdline_pipeline({
+						fuzzy = 1,
+						set_to_fuzzy_refiner = 1,
+					}),
+					wilder.vim_search_pipeline({
+						fuzzy = 1,
+					})
+				),
+			})
+		end
+	}
+
 end)
