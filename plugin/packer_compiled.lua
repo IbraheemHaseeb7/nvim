@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/ibraheem/.cache/nvim/packer_hererocks/2.1.1762795099/share/lua/5.1/?.lua;/Users/ibraheem/.cache/nvim/packer_hererocks/2.1.1762795099/share/lua/5.1/?/init.lua;/Users/ibraheem/.cache/nvim/packer_hererocks/2.1.1762795099/lib/luarocks/rocks-5.1/?.lua;/Users/ibraheem/.cache/nvim/packer_hererocks/2.1.1762795099/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/ibraheem/.cache/nvim/packer_hererocks/2.1.1762795099/lib/lua/5.1/?.so"
+local package_path_str = "/Users/ibraheem/.cache/nvim/packer_hererocks/2.1.1788856981/share/lua/5.1/?.lua;/Users/ibraheem/.cache/nvim/packer_hererocks/2.1.1788856981/share/lua/5.1/?/init.lua;/Users/ibraheem/.cache/nvim/packer_hererocks/2.1.1788856981/lib/luarocks/rocks-5.1/?.lua;/Users/ibraheem/.cache/nvim/packer_hererocks/2.1.1788856981/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/ibraheem/.cache/nvim/packer_hererocks/2.1.1788856981/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -89,12 +89,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/ibraheem/.local/share/nvim/site/pack/packer/start/autoclose.nvim",
     url = "https://github.com/m4xshen/autoclose.nvim"
-  },
-  ["avante.nvim"] = {
-    config = { "\27LJ\2\n…\1\0\0\5\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\3=\3\a\2B\0\2\1K\0\1\0\14providers\fmistral\1\0\1\fmistral\0\1\0\3\ftimeout\3∞Í\1\21__inherited_from\vopenai\17api_key_name\20MISTRAL_API_KEY\1\0\2\14providers\0\rprovider\fmistral\nsetup\vavante\frequire\0" },
-    loaded = true,
-    path = "/Users/ibraheem/.local/share/nvim/site/pack/packer/start/avante.nvim",
-    url = "https://github.com/yetone/avante.nvim"
   },
   ["cmp-nvim-lsp"] = {
     loaded = true,
@@ -236,11 +230,6 @@ _G.packer_plugins = {
     path = "/Users/ibraheem/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
-  playground = {
-    loaded = true,
-    path = "/Users/ibraheem/.local/share/nvim/site/pack/packer/start/playground",
-    url = "https://github.com/nvim-treesitter/playground"
-  },
   ["plenary.nvim"] = {
     loaded = true,
     path = "/Users/ibraheem/.local/share/nvim/site/pack/packer/start/plenary.nvim",
@@ -282,6 +271,12 @@ _G.packer_plugins = {
     path = "/Users/ibraheem/.local/share/nvim/site/pack/packer/start/tokyonight",
     url = "https://github.com/folke/tokyonight.nvim"
   },
+  ["trace-pr.nvim"] = {
+    config = { "\27LJ\2\n:\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\rtrace-pr\frequire\0" },
+    loaded = true,
+    path = "/Users/ibraheem/.local/share/nvim/site/pack/packer/start/trace-pr.nvim",
+    url = "https://github.com/h3pei/trace-pr.nvim"
+  },
   undotree = {
     loaded = true,
     path = "/Users/ibraheem/.local/share/nvim/site/pack/packer/start/undotree",
@@ -296,42 +291,42 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: tokyonight
-time([[Config for tokyonight]], true)
-try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\27colorscheme tokyonight\bcmd\bvim\0", "config", "tokyonight")
-time([[Config for tokyonight]], false)
--- Config for: Comment.nvim
-time([[Config for Comment.nvim]], true)
-try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
-time([[Config for Comment.nvim]], false)
--- Config for: ghpr.nvim
-time([[Config for ghpr.nvim]], true)
-try_loadstring("\27LJ\2\nq\0\0\6\0\a\0\t6\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\4\0'\4\5\0005\5\6\0B\0\5\1K\0\1\0\1\0\1\tdesc\26Git: Open PR for line\16:OpenPR<CR>\15<leader>gp\6n\bset\vkeymap\bvim\0", "config", "ghpr.nvim")
-time([[Config for ghpr.nvim]], false)
--- Config for: nvim-surround
-time([[Config for nvim-surround]], true)
-try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18nvim-surround\frequire\0", "config", "nvim-surround")
-time([[Config for nvim-surround]], false)
--- Config for: wilder.nvim
-time([[Config for wilder.nvim]], true)
-try_loadstring("\27LJ\2\nÅ\2\0\0\v\0\r\1\0226\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\4\0005\4\3\0=\4\5\3B\1\2\0019\1\6\0'\3\a\0004\4\3\0009\5\b\0009\a\t\0005\t\n\0B\a\2\0029\b\v\0005\n\f\0B\b\2\0A\5\1\0?\5\0\0B\1\3\1K\0\1\0\1\0\1\nfuzzy\3\1\24vim_search_pipeline\1\0\2\25set_to_fuzzy_refiner\3\1\nfuzzy\3\1\21cmdline_pipeline\vbranch\rpipeline\15set_option\nmodes\1\0\1\nmodes\0\1\4\0\0\6:\6/\6?\nsetup\vwilder\frequire\3ÄÄ¿ô\4\0", "config", "wilder.nvim")
-time([[Config for wilder.nvim]], false)
--- Config for: lsp_lines.nvim
-time([[Config for lsp_lines.nvim]], true)
-try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14lsp_lines\frequire\0", "config", "lsp_lines.nvim")
-time([[Config for lsp_lines.nvim]], false)
--- Config for: oil.nvim
-time([[Config for oil.nvim]], true)
-try_loadstring("\27LJ\2\nk\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\17view_options\1\0\1\17view_options\0\1\0\1\16show_hidden\2\nsetup\boil\frequire\0", "config", "oil.nvim")
-time([[Config for oil.nvim]], false)
--- Config for: avante.nvim
-time([[Config for avante.nvim]], true)
-try_loadstring("\27LJ\2\n…\1\0\0\5\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\3=\3\a\2B\0\2\1K\0\1\0\14providers\fmistral\1\0\1\fmistral\0\1\0\3\ftimeout\3∞Í\1\21__inherited_from\vopenai\17api_key_name\20MISTRAL_API_KEY\1\0\2\14providers\0\rprovider\fmistral\nsetup\vavante\frequire\0", "config", "avante.nvim")
-time([[Config for avante.nvim]], false)
 -- Config for: indent-blankline.nvim
 time([[Config for indent-blankline.nvim]], true)
 try_loadstring("\27LJ\2\n1\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\bibl\frequire\0", "config", "indent-blankline.nvim")
 time([[Config for indent-blankline.nvim]], false)
+-- Config for: tokyonight
+time([[Config for tokyonight]], true)
+try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\27colorscheme tokyonight\bcmd\bvim\0", "config", "tokyonight")
+time([[Config for tokyonight]], false)
+-- Config for: ghpr.nvim
+time([[Config for ghpr.nvim]], true)
+try_loadstring("\27LJ\2\nq\0\0\6\0\a\0\t6\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\4\0'\4\5\0005\5\6\0B\0\5\1K\0\1\0\1\0\1\tdesc\26Git: Open PR for line\16:OpenPR<CR>\15<leader>gp\6n\bset\vkeymap\bvim\0", "config", "ghpr.nvim")
+time([[Config for ghpr.nvim]], false)
+-- Config for: trace-pr.nvim
+time([[Config for trace-pr.nvim]], true)
+try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\rtrace-pr\frequire\0", "config", "trace-pr.nvim")
+time([[Config for trace-pr.nvim]], false)
+-- Config for: lsp_lines.nvim
+time([[Config for lsp_lines.nvim]], true)
+try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14lsp_lines\frequire\0", "config", "lsp_lines.nvim")
+time([[Config for lsp_lines.nvim]], false)
+-- Config for: Comment.nvim
+time([[Config for Comment.nvim]], true)
+try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
+time([[Config for Comment.nvim]], false)
+-- Config for: wilder.nvim
+time([[Config for wilder.nvim]], true)
+try_loadstring("\27LJ\2\nÅ\2\0\0\v\0\r\1\0226\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\4\0005\4\3\0=\4\5\3B\1\2\0019\1\6\0'\3\a\0004\4\3\0009\5\b\0009\a\t\0005\t\n\0B\a\2\0029\b\v\0005\n\f\0B\b\2\0A\5\1\0?\5\0\0B\1\3\1K\0\1\0\1\0\1\nfuzzy\3\1\24vim_search_pipeline\1\0\2\25set_to_fuzzy_refiner\3\1\nfuzzy\3\1\21cmdline_pipeline\vbranch\rpipeline\15set_option\nmodes\1\0\1\nmodes\0\1\4\0\0\6:\6/\6?\nsetup\vwilder\frequire\3ÄÄ¿ô\4\0", "config", "wilder.nvim")
+time([[Config for wilder.nvim]], false)
+-- Config for: nvim-surround
+time([[Config for nvim-surround]], true)
+try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18nvim-surround\frequire\0", "config", "nvim-surround")
+time([[Config for nvim-surround]], false)
+-- Config for: oil.nvim
+time([[Config for oil.nvim]], true)
+try_loadstring("\27LJ\2\nk\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\17view_options\1\0\1\17view_options\0\1\0\1\16show_hidden\2\nsetup\boil\frequire\0", "config", "oil.nvim")
+time([[Config for oil.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

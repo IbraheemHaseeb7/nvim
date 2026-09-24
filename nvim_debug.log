@@ -1,0 +1,69 @@
+
+sourcing "nvim_exec2()"
+finished sourcing nvim_exec2()
+sourcing "/opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/ftplugin.vim"
+finished sourcing /opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/ftplugin.vim
+sourcing "/opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/indent.vim"
+finished sourcing /opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/indent.vim
+could not source "/opt/homebrew/etc/xdg/nvim/sysinit.vim"
+could not source "/etc/xdg/nvim/sysinit.vim"
+could not source "$VIM/sysinit.vim"
+could not source "/Users/ibraheem/.config/nvim/init.vim"
+could not source "/opt/homebrew/etc/xdg//nvim/init.vim"
+could not source "/etc/xdg//nvim/init.vim"
+sourcing "/opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/filetype.lua"
+line 0: sourcing "nvim_exec2() called at /opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/filetype.lua:0"
+line 2: sourcing "/Applications/Ghostty.app/Contents/Resources/ghostty/../nvim/site/ftdetect/ghostty.vim"
+finished sourcing /Applications/Ghostty.app/Contents/Resources/ghostty/../nvim/site/ftdetect/ghostty.vim
+continuing in nvim_exec2() called at /opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/filetype.lua:0
+finished sourcing nvim_exec2() called at /opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/filetype.lua:0
+continuing in /opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/filetype.lua
+finished sourcing /opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/filetype.lua
+sourcing "/opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/syntax/syntax.vim"
+line 20: sourcing "/opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/syntax/synload.vim"
+finished sourcing /opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/syntax/synload.vim
+continuing in /opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/syntax/syntax.vim
+finished sourcing /opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/syntax/syntax.vim
+sourcing "/opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/plugin/gzip.vim"
+finished sourcing /opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/plugin/gzip.vim
+sourcing "/opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/plugin/matchit.vim"
+not found in 'packpath': "pack/*/start/matchit"
+line 3: sourcing "/opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim"
+finished sourcing /opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+continuing in /opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/plugin/matchit.vim
+finished sourcing /opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/plugin/matchit.vim
+sourcing "/opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/plugin/matchparen.vim"
+finished sourcing /opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/plugin/matchparen.vim
+sourcing "/opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/plugin/netrwPlugin.vim"
+not found in 'packpath': "pack/*/start/netrw"
+line 7: sourcing "/opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/pack/dist/opt/netrw/plugin/netrwPlugin.vim"
+finished sourcing /opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/pack/dist/opt/netrw/plugin/netrwPlugin.vim
+continuing in /opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/plugin/netrwPlugin.vim
+finished sourcing /opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/plugin/netrwPlugin.vim
+sourcing "/opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/plugin/rplugin.vim"
+line 3: sourcing "/Users/ibraheem/.local/share/nvim/rplugin.vim"
+finished sourcing /Users/ibraheem/.local/share/nvim/rplugin.vim
+continuing in <SNR>14_LoadRemotePlugins
+finished sourcing /opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/plugin/rplugin.vim
+sourcing "/opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/plugin/shada.vim"
+finished sourcing /opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/plugin/shada.vim
+sourcing "/opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/plugin/spellfile.vim"
+finished sourcing /opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/plugin/spellfile.vim
+sourcing "/opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/plugin/tarPlugin.vim"
+finished sourcing /opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/plugin/tarPlugin.vim
+sourcing "/opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/plugin/tutor.vim"
+finished sourcing /opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/plugin/tutor.vim
+sourcing "/opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/plugin/zipPlugin.vim"
+finished sourcing /opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/plugin/zipPlugin.vim
+sourcing "/opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/plugin/editorconfig.lua"
+finished sourcing /opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/plugin/editorconfig.lua
+sourcing "/opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/plugin/man.lua"
+finished sourcing /opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/plugin/man.lua
+sourcing "/opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/plugin/osc52.lua"
+finished sourcing /opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/plugin/osc52.lua
+sourcing "/opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/plugin/tohtml.lua"
+finished sourcing /opt/homebrew/Cellar/neovim/0.11.5/share/nvim/runtime/plugin/tohtml.lua
+sourcing "/Users/ibraheem/.local/share/nvim/site/pack/packer/start/avante.nvim/plugin/avante.lua"
+                                                                                                 Avante requires at least nvim-0.12Please upgrade your neovim versionPress any key to exit
+line 0: sourcing "nvim_exec2() called at /Users/ibraheem/.local/share/nvim/site/pack/packer/start/avante.nvim/plugin/avante.lua:0"
+Writing ShaDa file "/Users/ibraheem/.local/state/nvim/shada/main.shada"

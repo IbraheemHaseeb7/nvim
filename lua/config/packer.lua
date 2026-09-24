@@ -13,8 +13,9 @@ return require('packer').startup(function(use)
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
-	use ( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-	use ('nvim-treesitter/playground')
+	use ({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'})
+
+	-- use ('nvim-treesitter/playground')
 
 	-- use ({ 
 	-- 	'rose-pine/neovim',
@@ -124,31 +125,31 @@ return require('packer').startup(function(use)
 	use 'stevearc/dressing.nvim'
 	use 'folke/snacks.nvim'
 
-	use {
-		'yetone/avante.nvim',
-		run = 'make',
-		requires = {
-			'nvim-treesitter/nvim-treesitter',
-			'stevearc/dressing.nvim',
-			'nvim-lua/plenary.nvim',
-			'MunifTanjim/nui.nvim',
-			'nvim-tree/nvim-web-devicons',
-			'hrsh7th/nvim-cmp',
-			'MeanderingProgrammer/render-markdown.nvim',
-		},
-		config = function()
-			require('avante').setup({
-				provider = "mistral",
-				providers = {
-					mistral = {
-						__inherited_from = "openai",
-						api_key_name = "MISTRAL_API_KEY",
-						timeout = 30000,
-					},
-				},
-			})
-		end
-	}
+	-- use {
+	-- 	'yetone/avante.nvim',
+	-- 	run = 'make',
+	-- 	requires = {
+	-- 		'nvim-treesitter/nvim-treesitter',
+	-- 		'stevearc/dressing.nvim',
+	-- 		'nvim-lua/plenary.nvim',
+	-- 		'MunifTanjim/nui.nvim',
+	-- 		'nvim-tree/nvim-web-devicons',
+	-- 		'hrsh7th/nvim-cmp',
+	-- 		'MeanderingProgrammer/render-markdown.nvim',
+	-- 	},
+	-- 	config = function()
+	-- 		require('avante').setup({
+	-- 			provider = "mistral",
+	-- 			providers = {
+	-- 				mistral = {
+	-- 					__inherited_from = "openai",
+	-- 					api_key_name = "MISTRAL_API_KEY",
+	-- 					timeout = 30000,
+	-- 				},
+	-- 			},
+	-- 		})
+	-- 	end
+	-- }
 
 
 	use({
@@ -193,5 +194,15 @@ return require('packer').startup(function(use)
 			})
 		end
 	}
+
+	use {
+		'h3pei/trace-pr.nvim',
+		config = function()
+			require('trace-pr').setup({
+				-- You can leave this blank for default settings
+			})
+		end
+	}
+
 
 end)
